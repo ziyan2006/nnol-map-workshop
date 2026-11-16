@@ -1,0 +1,209 @@
+{
+  "revision": "c68fddd3c1591787",
+  "models": [
+    {
+      "id": "jinhu-square",
+      "name": "jinhu-square",
+      "json": "jinhu-square.f25934afd337e7ad4baada6e.json",
+      "preview": "jinhu-square-preview.6f8c4cca7599abe1ac16f866.glb",
+      "glb": "jinhu-square.3f9344079393474a70fd447b.glb",
+      "source": {
+        "glb": "assets/landmarks/jinhu-square.3f9344079393474a70fd447b.glb",
+        "json": "assets/landmarks/jinhu-square.f25934afd337e7ad4baada6e.json",
+        "preview": "assets/landmarks/jinhu-square-preview.6f8c4cca7599abe1ac16f866.glb"
+      }
+    },
+    {
+      "id": "changyou",
+      "name": "changyou",
+      "json": "changyou.ec357353886ab2340c176e24.json",
+      "preview": "changyou-preview.c97b2b91a186c5083f4d0a63.glb",
+      "glb": "changyou.7a3bfe2a1440970462d7c7fc.glb",
+      "source": {
+        "glb": "assets/landmarks/changyou.7a3bfe2a1440970462d7c7fc.glb",
+        "json": "assets/landmarks/changyou.ec357353886ab2340c176e24.json",
+        "preview": "assets/landmarks/changyou-preview.c97b2b91a186c5083f4d0a63.glb"
+      }
+    },
+    {
+      "id": "dubai7-hotel",
+      "name": "dubai7-hotel",
+      "json": "dubai7-hotel.8c11eaeb000ea706c8b14f82.json",
+      "preview": "dubai7-hotel-preview.f3a24bb874dfac6a685eaae1.glb",
+      "glb": "dubai7-hotel.40756291f7a01bac848a8dd8.glb",
+      "source": {
+        "glb": "assets/landmarks/dubai7-hotel.40756291f7a01bac848a8dd8.glb",
+        "json": "assets/landmarks/dubai7-hotel.8c11eaeb000ea706c8b14f82.json",
+        "preview": "assets/landmarks/dubai7-hotel-preview.f3a24bb874dfac6a685eaae1.glb"
+      }
+    },
+    {
+      "id": "expo",
+      "name": "expo-v10",
+      "glb": "expo-v10.5431ffb19dc7bf3f9d41f905.glb",
+      "json": "expo-v10.469e91acf7eedb0b34bf0f8a.json",
+      "preview": "expo-v10-preview.2f73544af321c170b707ac93.glb",
+      "source": {
+        "glb": "assets/landmarks/expo-v10.5431ffb19dc7bf3f9d41f905.glb",
+        "json": "assets/landmarks/expo-v10.469e91acf7eedb0b34bf0f8a.json",
+        "preview": "assets/landmarks/expo-v10-preview.2f73544af321c170b707ac93.glb"
+      }
+    },
+    {
+      "id": "gx-stadium",
+      "name": "gx-stadium",
+      "json": "gx-stadium.8361885256824f8bad51b97f.json",
+      "preview": "gx-stadium-preview.13f7171e5d1ccdfc67de5ee9.glb",
+      "glb": "gx-stadium.10e18d75dfc6afb664c7c87e.glb",
+      "source": {
+        "glb": "assets/landmarks/gx-stadium.10e18d75dfc6afb664c7c87e.glb",
+        "json": "assets/landmarks/gx-stadium.8361885256824f8bad51b97f.json",
+        "preview": "assets/landmarks/gx-stadium-preview.13f7171e5d1ccdfc67de5ee9.glb"
+      }
+    },
+    {
+      "id": "liangqing-bridge",
+      "name": "liangqing-bridge",
+      "json": "liangqing-bridge.642e185a298d1a3dfd15e93b.json",
+      "preview": "liangqing-bridge-preview.1f1029a4fe551b0049c0e48e.glb",
+      "glb": "liangqing-bridge.b8c9f8b2bd837af7de268c4e.glb",
+      "source": {
+        "glb": "assets/landmarks/liangqing-bridge.b8c9f8b2bd837af7de268c4e.glb",
+        "json": "assets/landmarks/liangqing-bridge.642e185a298d1a3dfd15e93b.json",
+        "preview": "assets/landmarks/liangqing-bridge-preview.1f1029a4fe551b0049c0e48e.glb"
+      }
+    },
+    {
+      "id": "longxiang",
+      "name": "longxiang",
+      "json": "longxiang.84b8ea01b7fea0451a5b4816.json",
+      "preview": "longxiang-preview.fd5b0eb58587fcd95efb1309.glb",
+      "glb": "longxiang.1e0317a754f619ef3a70c11c.glb",
+      "source": {
+        "glb": "assets/landmarks/longxiang.1e0317a754f619ef3a70c11c.glb",
+        "json": "assets/landmarks/longxiang.84b8ea01b7fea0451a5b4816.json",
+        "preview": "assets/landmarks/longxiang-preview.fd5b0eb58587fcd95efb1309.glb"
+      }
+    },
+    {
+      "id": "milan-community",
+      "name": "milan-community",
+      "json": "milan-community.ee767eca40b1dcebfe37e2c9.json",
+      "preview": "milan-community-preview.e9ab9b0b963753af52237d8e.glb",
+      "glb": "milan-community.a4ad2f9cb00c25a97be530be.glb",
+      "source": {
+        "glb": "assets/landmarks/milan-community.a4ad2f9cb00c25a97be530be.glb",
+        "json": "assets/landmarks/milan-community.ee767eca40b1dcebfe37e2c9.json",
+        "preview": "assets/landmarks/milan-community-preview.e9ab9b0b963753af52237d8e.glb"
+      }
+    },
+    {
+      "id": "mingehu",
+      "name": "mingehu",
+      "preview": "mingehu-preview.c09f34a41d9ad494b9be38c8.glb",
+      "glb": "mingehu.9e82f639634e87a138b43036.glb",
+      "json": "mingehu.8f6ce176b4cb072573402eb8.json",
+      "source": {
+        "glb": "assets/landmarks/mingehu.9e82f639634e87a138b43036.glb",
+        "json": "assets/landmarks/mingehu.8f6ce176b4cb072573402eb8.json",
+        "preview": "assets/landmarks/mingehu-preview.c09f34a41d9ad494b9be38c8.glb"
+      }
+    },
+    {
+      "id": "minzu-cinema",
+      "name": "minzu-cinema",
+      "json": "minzu-cinema.bd6ef2f0539df8cbb70bc0bf.json",
+      "preview": "minzu-cinema-preview.8d74069cf37024bb96fb9399.glb",
+      "glb": "minzu-cinema.50367ed35ac5f4e77bcc4508.glb",
+      "source": {
+        "glb": "assets/landmarks/minzu-cinema.50367ed35ac5f4e77bcc4508.glb",
+        "json": "assets/landmarks/minzu-cinema.bd6ef2f0539df8cbb70bc0bf.json",
+        "preview": "assets/landmarks/minzu-cinema-preview.8d74069cf37024bb96fb9399.glb"
+      }
+    },
+    {
+      "id": "nanhu-bridge",
+      "name": "nanhu-bridge",
+      "json": "nanhu-bridge.43a4929098a114d75266f1d5.json",
+      "preview": "nanhu-bridge-preview.c3a982dcf335208e350d4791.glb",
+      "glb": "nanhu-bridge.3fb84038ad531a25fc0e9e4c.glb",
+      "source": {
+        "glb": "assets/landmarks/nanhu-bridge.3fb84038ad531a25fc0e9e4c.glb",
+        "json": "assets/landmarks/nanhu-bridge.43a4929098a114d75266f1d5.json",
+        "preview": "assets/landmarks/nanhu-bridge-preview.c3a982dcf335208e350d4791.glb"
+      }
+    },
+    {
+      "id": "nanhu",
+      "name": "nanhu-park",
+      "glb": "nanhu-park.03b4cb9db04760d1db2898a8.glb",
+      "preview": "nanhu-park-preview.14b546336dfbf52fff1d9b92.glb",
+      "json": "nanhu-park.b1fad9363116796662ecb0b3.json",
+      "source": {
+        "glb": "assets/landmarks/nanhu-park.03b4cb9db04760d1db2898a8.glb",
+        "json": "assets/landmarks/nanhu-park.b1fad9363116796662ecb0b3.json",
+        "preview": "assets/landmarks/nanhu-park-preview.14b546336dfbf52fff1d9b92.glb"
+      }
+    },
+    {
+      "id": "nanning-east",
+      "name": "nanning-east",
+      "json": "nanning-east.8f74b4fff10a7aed58b74470.json",
+      "preview": "nanning-east-preview.b2eee3001e9a944fb34ff430.glb",
+      "glb": "nanning-east.f42e1b64cde2d1ceacfd56d8.glb",
+      "source": {
+        "glb": "assets/landmarks/nanning-east.f42e1b64cde2d1ceacfd56d8.glb",
+        "json": "assets/landmarks/nanning-east.8f74b4fff10a7aed58b74470.json",
+        "preview": "assets/landmarks/nanning-east-preview.b2eee3001e9a944fb34ff430.glb"
+      }
+    },
+    {
+      "id": "no47-middle-school",
+      "name": "no47-middle-school",
+      "json": "no47-middle-school.7e34aa63ee002fb705c38a7d.json",
+      "glb": "no47-middle-school.3a4163ff85b824d35572643c.glb",
+      "preview": "no47-middle-school-preview.553879af9f3f0dab050bdb11.glb",
+      "source": {
+        "glb": "assets/landmarks/no47-middle-school.3a4163ff85b824d35572643c.glb",
+        "json": "assets/landmarks/no47-middle-school.7e34aa63ee002fb705c38a7d.json",
+        "preview": "assets/landmarks/no47-middle-school-preview.553879af9f3f0dab050bdb11.glb"
+      }
+    },
+    {
+      "id": "teamwas-hq",
+      "name": "teamwas-hq",
+      "json": "teamwas-hq.963e0ecef8a2290c7e059351.json",
+      "preview": "teamwas-hq-preview.4303d47fe531483ab35a0ae4.glb",
+      "glb": "teamwas-hq.d663bed0bd272fffd01b8218.glb",
+      "source": {
+        "glb": "assets/landmarks/teamwas-hq.d663bed0bd272fffd01b8218.glb",
+        "json": "assets/landmarks/teamwas-hq.963e0ecef8a2290c7e059351.json",
+        "preview": "assets/landmarks/teamwas-hq-preview.4303d47fe531483ab35a0ae4.glb"
+      }
+    },
+    {
+      "id": "twin-towers",
+      "name": "twin-towers",
+      "glb": "twin-towers.cfe7e4907abbe724196d01fa.glb",
+      "preview": "twin-towers-preview.3d758feb3a8061caf09a1657.glb",
+      "json": "twin-towers.8c269693c4a02e59cf4f8646.json",
+      "source": {
+        "glb": "assets/landmarks/twin-towers.cfe7e4907abbe724196d01fa.glb",
+        "json": "assets/landmarks/twin-towers.8c269693c4a02e59cf4f8646.json",
+        "preview": "assets/landmarks/twin-towers-preview.3d758feb3a8061caf09a1657.glb"
+      }
+    },
+    {
+      "id": "yongkai-modern-city",
+      "name": "yongkai-modern-city",
+      "json": "yongkai-modern-city.71580bb382156a9ca3a04c74.json",
+      "preview": "yongkai-modern-city-preview.0b92327b8da817c5da166233.glb",
+      "glb": "yongkai-modern-city.b19c8a1e3a99b0f8dcbfc61f.glb",
+      "source": {
+        "glb": "assets/landmarks/yongkai-modern-city.b19c8a1e3a99b0f8dcbfc61f.glb",
+        "json": "assets/landmarks/yongkai-modern-city.71580bb382156a9ca3a04c74.json",
+        "preview": "assets/landmarks/yongkai-modern-city-preview.0b92327b8da817c5da166233.glb"
+      }
+    }
+  ]
+}

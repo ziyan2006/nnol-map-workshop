@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网上南宁 · 本地地图</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/build/three.module.min.js"}}</script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><strong>网上南宁</strong><span>本地地图</span></div>
+    <div class="modes" role="group" aria-label="地图视图">
+      <button id="mode-2d" aria-pressed="true">二维地图</button>
+      <button id="mode-3d" aria-pressed="false">三维地形</button>
+      <button id="mode-street" aria-pressed="false">全城街景</button>
+    </div>
+  </header>
+  <main class="layout">
+    <section id="viewport" aria-label="南宁城区地图">
+      <canvas id="map" tabindex="0" aria-label="二维地图，点击选择坐标，方向键平移，回车选择地图中心"></canvas>
+      <div id="terrain" hidden></div>
+      <div id="street" hidden></div>
+      <div class="quick" id="map-jumps" aria-label="前往预设位置">
+        <button data-jump="all">全城</button>
+        <button data-jump="spawn">出生点</button>
+        <button data-jump="qingxiushan-tianchi">青秀山 · 天池</button>
+        <button data-jump="longxiang">龙象塔</button>
+      </div>
+      <div class="quick" id="street-controls" aria-label="街景选项" hidden>
+        <button id="street-reset">回到截图坐标</button>
+        <button id="street-night" aria-pressed="true">夜景</button>
+        <button id="street-flight" aria-pressed="false" title="F 切换飞行">飞行</button>
+        <button id="street-compare" hidden></button>
+        <output id="flight-readout" aria-label="飞行速度和离地高度" aria-live="off" hidden></output>
+        <div class="time-control">
+          <label for="street-time">时间</label>
+          <input id="street-time" type="range" min="0" max="1439" step="1" value="1421" aria-valuetext="23:41">
+          <output id="street-time-value" for="street-time">23:41</output>
+        </div>
+      </div>
+      <div class="tools">
+        <button id="zoom-in" type="button" aria-label="放大">+</button>
+        <button id="zoom-out" type="button" aria-label="缩小">−</button>
+      </div>
+      <div id="north" aria-label="上方为北">↑ 北</div>
+      <button id="street-minimap" type="button" aria-label="街景小地图，打开当前位置的二维地图" hidden>
+        <canvas aria-hidden="true"></canvas>
+        <span class="minimap-north" aria-hidden="true">北</span>
+        <span class="minimap-range" aria-hidden="true"></span>
+      </button>
+      <div class="map-bottom">
+        <output id="scale"></output>
+        <div id="street-hint" hidden><span id="street-keys">W A S D 移动 · 拖动转头</span> <span class="street-credit">· © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</span></div>
+        <output id="coordinates"></output>
+      </div>
+      <p id="status" role="status">正在读取本地地图…</p>
+    </section>
+    <aside class="sidebar" aria-label="地图信息">
+      <div class="search-panel">
+        <label for="search">地标搜索</label>
+        <input id="search" type="search" placeholder="龙象塔、南湖、会展中心…" autocomplete="off">
+        <div id="results" aria-label="搜索结果"></div>
+      </div>
+      <section id="place" class="place" aria-live="polite"></section>
+      <div class="layers">
+        <label><input id="roads" type="checkbox" checked> 道路</label>
+        <label><input id="places" type="checkbox" checked> 地标</label>
+        <label id="buildings-option" hidden><input id="buildings" type="checkbox" checked> 远景建筑</label>
+      </div>
+      <p id="hint" class="hint">点击地图选点 · 拖动平移 · 滚轮缩放</p>
+      <footer>
+        网上南宁 0.8.2 公开地图数据<br>
+        © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors · 3D-GloBFP
+      </footer>
+    </aside>
+  </main>
+</body>
+</html>

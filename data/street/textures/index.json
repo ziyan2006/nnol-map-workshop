@@ -1,0 +1,302 @@
+{
+  "version": 2,
+  "facades": [
+    {
+      "name": "res-warm",
+      "floors": 4,
+      "bays": 4,
+      "bayWidth": 3.6
+    },
+    {
+      "name": "res-grey",
+      "floors": 4,
+      "bays": 4,
+      "bayWidth": 3.6
+    },
+    {
+      "name": "res-old",
+      "floors": 4,
+      "bays": 4,
+      "bayWidth": 3.3
+    },
+    {
+      "name": "village",
+      "floors": 4,
+      "bays": 3,
+      "bayWidth": 3.4
+    },
+    {
+      "name": "office-blue",
+      "floors": 10,
+      "bays": 16,
+      "bayWidth": 1.6
+    },
+    {
+      "name": "office-band",
+      "floors": 8,
+      "bays": 14,
+      "bayWidth": 1.8
+    },
+    {
+      "name": "office-green",
+      "floors": 10,
+      "bays": 20,
+      "bayWidth": 1.4
+    },
+    {
+      "name": "stone",
+      "floors": 3,
+      "bays": 4,
+      "bayWidth": 4.2
+    },
+    {
+      "name": "industrial",
+      "floors": 1,
+      "bays": 8,
+      "bayWidth": 2
+    },
+    {
+      "name": "shop",
+      "floors": 1,
+      "bays": 2,
+      "bayWidth": 7
+    },
+    {
+      "name": "roof",
+      "floors": 1,
+      "bays": 1,
+      "bayWidth": 24
+    },
+    {
+      "name": "qilou",
+      "floors": 3,
+      "bays": 3,
+      "bayWidth": 3.6
+    },
+    {
+      "name": "selfbuilt",
+      "floors": 4,
+      "bays": 2,
+      "bayWidth": 3.3
+    },
+    {
+      "name": "barewall",
+      "floors": 4,
+      "bays": 2,
+      "bayWidth": 4
+    },
+    {
+      "name": "school",
+      "floors": 3,
+      "bays": 6,
+      "bayWidth": 3.4
+    },
+    {
+      "name": "hospital",
+      "floors": 4,
+      "bays": 4,
+      "bayWidth": 3.6
+    },
+    {
+      "name": "factory",
+      "floors": 1,
+      "bays": 4,
+      "bayWidth": 6
+    },
+    {
+      "name": "oldbrick",
+      "floors": 1,
+      "bays": 2,
+      "bayWidth": 3.6
+    },
+    {
+      "name": "rooftile",
+      "floors": 1,
+      "bays": 1,
+      "bayWidth": 4
+    },
+    {
+      "name": "steel",
+      "floors": 1,
+      "bays": 1,
+      "bayWidth": 4
+    }
+  ],
+  "grounds": [
+    {
+      "name": "g-paving",
+      "metres": 6
+    },
+    {
+      "name": "g-grass",
+      "metres": 8
+    },
+    {
+      "name": "g-asphalt-worn",
+      "metres": 10
+    },
+    {
+      "name": "g-dirt",
+      "metres": 8
+    },
+    {
+      "name": "g-forest",
+      "metres": 14
+    },
+    {
+      "name": "g-concrete",
+      "metres": 8
+    },
+    {
+      "name": "g-pitch",
+      "metres": 10
+    },
+    {
+      "name": "g-ballast",
+      "metres": 4
+    },
+    {
+      "name": "g-sidewalk",
+      "metres": 4
+    },
+    {
+      "name": "g-cycle",
+      "metres": 5
+    },
+    {
+      "name": "g-track",
+      "metres": 6
+    },
+    {
+      "name": "g-paving-brick",
+      "metres": 2
+    },
+    {
+      "name": "g-paving-granite",
+      "metres": 4.5
+    },
+    {
+      "name": "g-paving-old",
+      "metres": 2.3
+    },
+    {
+      "name": "g-paving-grey",
+      "metres": 2.4
+    }
+  ],
+  "source": "ambientCG CC0 photo materials + original procedural composition (county layers 11+: procedural only)",
+  "procedural": [
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ]
+  ]
+}

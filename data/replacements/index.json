@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "baseRevision": "c68fddd3c1591787",
+  "targets": [
+    {
+      "id": "nn14-jianzheng",
+      "name": "南宁市第十四中学（建政校区）",
+      "en": "青秀区建政路27号 · 教学综合楼",
+      "point": [-5062, -1619.2],
+      "approachAt": [-5101, -1667],
+      "height": 30.25,
+      "active": "1.0.0"
+    }
+  ]
+}
