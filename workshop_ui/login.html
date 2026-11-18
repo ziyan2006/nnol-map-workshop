@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#173c37">
+  <title>登录 · 南宁地图工坊</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/workshop/workshop.css">
+  <script type="module" src="/workshop/workshop.js"></script>
+</head>
+<body data-page="login">
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/workshop/login">网上南宁 <span>地图工坊</span></a>
+      <nav aria-label="主要导航"><a href="/?from=login" target="_blank" rel="noopener">打开地图 <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main class="shell">
+    <div class="hero login-layout">
+      <div class="hero-copy">
+        <h1>NANNING <em>ONLINE</em></h1>
+        <p class="hero-subtitle">网上南宁 · 地图创意工坊</p>
+        <div class="hero-note">
+          <strong>工坊账号演示</strong>
+          <p>用演示账号试走玩家投稿或开发者审核流程。正式账号将由游戏团队接入。</p>
+        </div>
+      </div>
+      <section class="card login-card">
+        <h2>登录工坊</h2>
+        <p>选择一个演示账号继续。</p>
+        <form id="login-form">
+          <fieldset class="demo-accounts" id="demo-accounts"><legend class="sr-only">演示账号</legend></fieldset>
+          <button class="button primary submit-button" id="login-submit" type="submit" disabled>登录</button>
+        </form>
+        <p class="feedback" id="login-feedback" aria-live="polite"></p>
+      </section>
+    </div>
+  </main>
+  <footer class="shell footer"><span>南宁地图工坊</span><span>本机账号演示</span></footer>
+</body>
+</html>

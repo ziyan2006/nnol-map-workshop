@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#173c37">
+  <title>模型投稿 · 南宁地图工坊</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/workshop/workshop.css">
+  <link rel="stylesheet" href="/map-search.css">
+  <script type="module" src="/workshop/workshop.js"></script>
+</head>
+<body data-page="submit">
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/workshop/">网上南宁 <span>地图工坊</span></a>
+      <nav aria-label="主要导航">
+        <a class="current" href="/workshop/" aria-current="page">模型投稿</a>
+        <a href="/workshop/account">我的投稿</a>
+        <button id="open-tutorial" type="button" aria-haspopup="dialog" aria-controls="workshop-tour">教程</button>
+        <a class="map-link" href="/?from=submit" target="_blank" rel="noopener">打开地图 <span aria-hidden="true">↗</span></a>
+        <span class="account-name" data-account-name></span>
+        <button class="logout" type="button" data-logout>退出</button>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>NANNING <em>ONLINE</em></h1>
+        <p class="hero-subtitle">网上南宁 · 地图创意工坊</p>
+        <div class="hero-note">
+          <strong>制作和投稿建筑模型</strong>
+          <p>在大地图搜索地点，复制坐标和 Agent Prompt，开始还原你熟悉的南宁街道。</p>
+          <a class="text-button" id="jump-to-place" href="#locate">搜索地图地点 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <section class="card upload" id="submit-package">
+        <div class="upload-heading"><h2>上传交付包</h2><p>自动检查模型、落位配置和审核材料。</p></div>
+        <div id="revision-context" class="revision-context" hidden></div>
+        <form id="upload-form">
+          <div id="drop-zone" class="drop-zone">
+            <span class="upload-icon" aria-hidden="true">↑</span>
+            <strong id="filename">拖放 ZIP 文件到这里</strong>
+            <span id="filesize">仅支持 .zip · 最大 48 MiB</span>
+            <label class="button quiet small file-button" for="package">选择文件</label>
+            <input class="sr-only" id="package" type="file" accept=".zip,application/zip">
+          </div>
+          <button class="button primary submit-button" id="submit" type="submit" disabled>校验并提交</button>
+        </form>
+        <p id="upload-feedback" class="feedback" aria-live="polite"></p>
+        <section class="upload-result" id="result" aria-live="polite" hidden></section>
+        <button id="use-example" type="button" class="text-button">选用十四中示例包</button>
+        <details class="lookup" id="status-lookup">
+          <summary>查询投稿状态</summary>
+          <form id="lookup-form"><label class="sr-only" for="receipt">工单编号</label><input id="receipt" placeholder="输入工单编号" required><button class="button quiet small">查询</button></form>
+          <p id="lookup-feedback" class="feedback" aria-live="polite"></p>
+        </details>
+      </section>
+    </section>
+
+    <div class="section-heading" id="guide">
+      <h2>准备并提交模型</h2>
+      <p>从地点资料开始，或直接上传准备好的 ZIP。</p>
+    </div>
+    <div class="submission-layout">
+      <section class="card steps" aria-label="投稿指南">
+        <div class="step" id="locate">
+          <span class="step-no" aria-hidden="true">01</span>
+          <div class="step-main">
+            <h3>选定地图地点</h3>
+            <p>搜索地标、校园、地铁站或店铺，或直接在地图标记新地块。</p>
+            <div class="map-search">
+              <label class="map-search-field" for="place-search"><span class="map-search-icon" aria-hidden="true"></span>
+                <input id="place-search" type="search" aria-label="搜索地图地点" disabled
+                  placeholder="例如 十四中、金湖广场、白苍岭" autocomplete="off" spellcheck="false">
+                <kbd aria-hidden="true">/</kbd>
+              </label>
+              <div class="map-search-chips" id="place-chips" aria-label="地点分类"></div>
+              <small class="map-search-count" id="place-count" hidden></small>
+              <div class="map-search-results" id="place-results" aria-label="地图地点搜索结果" hidden></div>
+            </div>
+            <button id="manual-place" class="text-button" type="button" disabled>直接在地图选点</button>
+            <div id="place-editor" hidden>
+              <label for="place-name">地点名称</label>
+              <input id="place-name" type="text" maxlength="100" placeholder="输入要替换的建筑名称">
+              <div class="place-points">
+                <button class="button quiet small" id="pick-anchor" type="button">在地图校准锚点</button>
+                <button class="button quiet small" id="pick-approach" type="button">选择街景观察点</button>
+              </div>
+              <small class="fine" id="points"></small>
+              <p id="place-feedback" class="feedback" aria-live="polite"></p>
+              <button id="copy-place" type="button" class="text-button" disabled>复制地点资料</button>
+            </div>
+            <p id="search-feedback" class="feedback" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="step" id="prepare-model">
+          <span class="step-no" aria-hidden="true">02</span>
+          <div class="step-main">
+            <h3>制作模型与交付包</h3>
+            <p>把地点资料、照片或建模文件与 Prompt 一起交给 Agent。已有模型也可以按协议整理。</p>
+            <div class="inline-actions"><button id="copy-prompt" class="text-button" type="button">复制 Agent Prompt</button><button id="view-prompt" class="text-button muted" type="button">展开查看</button></div>
+            <p id="prompt-feedback" class="feedback" aria-live="polite"></p>
+            <pre id="prompt" class="prompt" hidden></pre>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-no" aria-hidden="true">03</span>
+          <div class="step-main">
+            <h3>核对交付材料</h3>
+            <div class="required"><code>model.glb</code><code>manifest.json</code><code>submission.json</code></div>
+            <p>三份必需文件放在 ZIP 根目录。可附实景图、独立模型图、地图验证图和具体改动说明，每类计 1 分。</p>
+            <p class="fine">ZIP 上限 48 MiB，三类图片合计上限 24 MiB。</p>
+          </div>
+        </div>
+      </section>
+      <figure class="hero-figure">
+        <div class="model-view"><img src="/workshop/campus.png" alt="十四中建政校区的手工教学楼模型，屋顶为蓝色跑道"></div>
+        <figcaption><span><strong>南宁市第十四中学</strong><small>建政校区 · 投稿示例</small></span><a href="/workshop/example.zip" download>下载示例 <span aria-hidden="true">↘</span></a></figcaption>
+      </figure>
+    </div>
+  </main>
+  <dialog id="map-picker">
+    <div class="dialog-bar"><div><h2 id="picker-title">在地图选点</h2><p>搜索或点击地图位置，再选择「使用此坐标」。</p></div><button id="close-picker" class="button quiet small" type="button">关闭</button></div>
+    <iframe title="南宁地图坐标选择" id="picker-frame"></iframe>
+  </dialog>
+  <section class="tour-panel" id="workshop-tour" role="dialog" aria-modal="false" aria-labelledby="tour-title" hidden>
+    <div class="tour-header">
+      <span>投稿教程</span>
+      <button class="tour-dismiss" id="tour-close" type="button" aria-label="关闭教程">×</button>
+    </div>
+    <div class="tour-progress" id="tour-progress" role="progressbar" aria-label="教程进度" aria-valuemin="1">
+      <span id="tour-progress-bar"></span>
+    </div>
+    <div class="tour-content" aria-live="polite">
+      <p class="tour-count" id="tour-count"></p>
+      <h2 id="tour-title"></h2>
+      <p class="tour-description" id="tour-description"></p>
+    </div>
+    <button class="button quiet small tour-action" id="tour-action" type="button" hidden></button>
+    <div class="tour-nav">
+      <button class="text-button muted" id="tour-back" type="button">上一步</button>
+      <button class="button primary small" id="tour-next" type="button">下一步</button>
+    </div>
+  </section>
+  <footer class="shell footer"><span>南宁地图工坊</span><span>网上南宁 0.8.2 底图 · 模型替换协议 v1</span></footer>
+</body>
+</html>

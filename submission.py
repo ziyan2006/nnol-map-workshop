@@ -10,6 +10,7 @@ import re
 import stat
 import struct
 from zipfile import BadZipFile, ZipFile
+from zlib import error as InflateError
 
 
 ROOT = Path(__file__).resolve().parent
@@ -218,7 +219,7 @@ def evidence_score(archive, members):
             with Image.open(io.BytesIO(data), formats=("PNG", "JPEG")) as image:
                 image.load()
             points[category] = True
-        except (OSError, ValueError, BadZipFile, RuntimeError, Image.DecompressionBombError) as error:
+        except (OSError, ValueError, BadZipFile, RuntimeError, InflateError, Image.DecompressionBombError) as error:
             warnings.append(f"{path} 未计分：{error}")
     if "changes.md" in members:
         try:
@@ -228,7 +229,7 @@ def evidence_score(archive, members):
             points["changes"] = bool(archive.read(member).decode("utf-8-sig").strip())
             if not points["changes"]:
                 warnings.append("changes.md 为空")
-        except (OSError, ValueError, BadZipFile, RuntimeError) as error:
+        except (OSError, ValueError, BadZipFile, RuntimeError, InflateError) as error:
             warnings.append(f"changes.md 未计分：{error}")
     return points, warnings
 
@@ -267,7 +268,7 @@ def main():
         report, *_ = inspect_package(args.package)
     except Invalid as error:
         report = {"passed": False, "reviewScore": None, "error": {"code": error.code, "message": str(error)}}
-    except (BadZipFile, OSError, RuntimeError, ValueError, RecursionError) as error:
+    except (BadZipFile, OSError, RuntimeError, ValueError, RecursionError, InflateError) as error:
         report = {"passed": False, "reviewScore": None, "error": {"code": "package", "message": str(error)}}
     print(json.dumps(report, ensure_ascii=True, indent=2))
     return 0 if report["passed"] else 1

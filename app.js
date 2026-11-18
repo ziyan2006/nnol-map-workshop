@@ -1,6 +1,7 @@
 import { compileMap, FlatMap, MiniMap } from "./map.js";
 import { tileKey } from "./street-tiles.js";
 import { loadReplacements } from "./replacements.js";
+import { loadMapSearchPlaces, mountMapSearch } from "./map-search.js";
 
 const $ = id => document.getElementById(id);
 const canvas = $("map");
@@ -11,6 +12,41 @@ const search = $("search");
 const results = $("results");
 const placePanel = $("place");
 const checkboxes = ["roads", "places", "buildings"].map($);
+const params = new URLSearchParams(location.search);
+
+function setupBackLink() {
+  const link = $("map-back");
+  const label = $("map-back-label");
+  const candidate = params.get("candidate") ?? "";
+  const packageId = /^[a-f0-9]{32}$/.test(candidate) ? candidate : "";
+  const source = params.get("from") ?? (packageId ? "review" : "");
+  const workshopPages = new Map([
+    ["review", [packageId ? `/workshop/review?package=${packageId}` : "/workshop/review",
+      packageId ? "返回工单" : "返回审核队列"]],
+    ["account", ["/workshop/account", "返回我的投稿"]],
+    ["submit", ["/workshop/", "返回投稿"]],
+    ["login", ["/workshop/login", "返回登录"]]
+  ]);
+  const workshopPage = workshopPages.get(source);
+  if (workshopPage) {
+    const [href, text] = workshopPage;
+    link.href = href;
+    label.textContent = text;
+  } else if (window.navigation?.canGoBack ?? history.length > 1) {
+    link.addEventListener("click", event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      history.back();
+    });
+  } else if (params.has("view")) {
+    label.textContent = "返回二维地图";
+  } else {
+    return;
+  }
+  link.hidden = false;
+}
+
+setupBackLink();
 
 function localJson(path) {
   return fetch(path).then(response => {
@@ -32,14 +68,14 @@ function element(tag, value, className) {
 }
 
 async function start() {
-  const params = new URLSearchParams(location.search);
   const replacementsEnabled = params.get("replacements") !== "off";
   const [index, data, catalog] = await Promise.all([
     localJson("./data/index.json"),
     localJson("./data/overview.json"),
     localJson("./data/landmarks/index.json").catch(() => ({ models: [] }))
   ]);
-  const replacements = await loadReplacements(index, replacementsEnabled);
+  const replacements = await loadReplacements(index, replacementsEnabled, params.get("candidate"));
+  const searchPlaces = await loadMapSearchPlaces(index, replacements.places);
   const world = compileMap(data);
   const minimapButton = $("street-minimap");
   const minimap = new MiniMap(minimapButton, world);
@@ -48,6 +84,7 @@ async function start() {
   const streetKeys = $("street-keys");
   const places = [...index.landmarks.filter(p => p.name && p.point?.length === 2), ...replacements.places];
   const byId = new Map(places.map(place => [place.id, place]));
+  const searchById = new Map(searchPlaces.map(place => [place.id, place]));
   const fullModels = new Set(catalog.models.filter(model => model.glb).map(model => model.id));
   const replacementTargets = new Set(replacements.places.map(place => place.id));
   const streetCompare = $("street-compare");
@@ -136,6 +173,7 @@ async function start() {
     if (destination) {
       const point = destination;
       placePanel.replaceChildren(element("h1", "已选坐标"), coordinateDetails(point));
+      addPickerButton(point);
       if (hasStreet(point)) {
         const button = streetButton("传送到此处", () => openStreet(point));
         button.classList.add("teleport");
@@ -161,6 +199,7 @@ async function start() {
     const subtitle = element("p", selected.en);
     placePanel.replaceChildren(header, subtitle, coordinateDetails(entrance ?? selected.point));
     const approach = approachPoint(selected);
+    addPickerButton(selected.point);
     if (approach) {
       const approachLabel = replacementTargets.has(selected.id) ? "定位街景观察点" : "定位原版标注入口";
       placePanel.append(streetButton(entrance ? "返回地标位置" : approachLabel, () => {
@@ -184,6 +223,20 @@ async function start() {
     } else if (fullModels.has(selected.id)) {
       placePanel.append(streetButton("查看原版模型", () => viewModel(selected)));
     }
+  }
+
+  function addPickerButton(point) {
+    if (params.get("workshop-pick") !== "1" || window.parent === window) return;
+    const button = streetButton("使用此坐标", () => {
+      const [longitude, latitude] = geo(point);
+      window.parent.postMessage({
+        type: "workshop-point",
+        point: point.map(value => Number(value.toFixed(2))),
+        longitude, latitude, hasStreet: hasStreet(point)
+      }, location.origin);
+    });
+    button.classList.add("teleport");
+    placePanel.append(button);
   }
 
   function applySelection() {
@@ -400,45 +453,31 @@ async function start() {
   for (const button of document.querySelectorAll("[data-jump]")) {
     button.addEventListener("click", () => {
       const key = button.dataset.jump;
-      search.value = "";
-      results.replaceChildren();
+      placeSearch.clear();
       jump(key === "spawn" ? defaultPlace : byId.get(key));
     });
   }
 
-  function useResult(place) {
-    search.value = place.name;
-    results.replaceChildren();
-    jump(place);
-  }
-
-  search.addEventListener("input", () => {
-    const query = search.value.trim().toLocaleLowerCase();
-    results.replaceChildren();
-    if (!query) return;
-    const all = places.filter(p => [p.name, p.en, p.id].some(text => text?.toLocaleLowerCase().includes(query)));
-    all.sort((a, b) => Number(b.name.endsWith(query)) - Number(a.name.endsWith(query)) || a.name.length - b.name.length);
-    const matches = all.slice(0, 12);
-    if (!matches.length) results.append(element("p", "没有匹配的地标"));
-    for (const place of matches) {
-      const button = element("button", place.name);
-      button.addEventListener("click", () => useResult(place));
-      results.append(button);
-    }
-  });
-
-  search.addEventListener("keydown", event => {
-    if (event.key === "Enter") results.querySelector("button")?.click();
-    if (event.key === "Escape") {
-      search.value = "";
-      results.replaceChildren();
-    }
+  const placeSearch = mountMapSearch({
+    input: search, list: results, count: $("search-count"), chips: $("search-chips"),
+    places: searchPlaces, origin: () => flat.origin, onSelect: jump
   });
 
   panel();
   flat.fit();
   message();
-  const linkedPlace = byId.get(params.get("id"));
+  if (params.get("workshop-pick") === "1") {
+    const centerAt = params.get("pick-center")?.split(",").map(Number);
+    if (centerAt?.length === 2 && centerAt.every(Number.isFinite)) {
+      const { minX, maxX, minZ, maxZ } = world.extent;
+      const [x, z] = centerAt;
+      if (x >= minX && x <= maxX && z >= minZ && z <= maxZ) {
+        pickPoint(centerAt);
+        focus(centerAt, Math.max(0.6, 260 / canvas.clientWidth));
+      }
+    }
+  }
+  const linkedPlace = byId.get(params.get("id")) ?? searchById.get(params.get("id"));
   if (params.get("view") === "street") {
     if (linkedPlace) {
       select(linkedPlace);

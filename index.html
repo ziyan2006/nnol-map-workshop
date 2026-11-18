@@ -6,12 +6,16 @@
   <title>网上南宁 · 本地地图</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./map-search.css">
   <script type="importmap">{"imports":{"three":"./vendor/build/three.module.min.js"}}</script>
   <script type="module" src="./app.js"></script>
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><strong>网上南宁</strong><span>本地地图</span></div>
+    <div class="topbar-start">
+      <a id="map-back" class="map-back" href="./" hidden><span aria-hidden="true">←</span> <span id="map-back-label">返回上一页</span></a>
+      <div class="brand"><strong>网上南宁</strong><span>本地地图</span></div>
+    </div>
     <div class="modes" role="group" aria-label="地图视图">
       <button id="mode-2d" aria-pressed="true">二维地图</button>
       <button id="mode-3d" aria-pressed="false">三维地形</button>
@@ -59,10 +63,14 @@
       <p id="status" role="status">正在读取本地地图…</p>
     </section>
     <aside class="sidebar" aria-label="地图信息">
-      <div class="search-panel">
-        <label for="search">地标搜索</label>
-        <input id="search" type="search" placeholder="龙象塔、南湖、会展中心…" autocomplete="off">
-        <div id="results" aria-label="搜索结果"></div>
+      <div class="search-panel map-search">
+        <label class="map-search-field" for="search"><span class="map-search-icon" aria-hidden="true"></span>
+          <input id="search" type="search" placeholder="搜索地点" aria-label="搜索地点" autocomplete="off" spellcheck="false" disabled>
+          <kbd aria-hidden="true">/</kbd>
+        </label>
+        <div class="map-search-chips" id="search-chips" aria-label="地点分类"></div>
+        <small class="map-search-count" id="search-count" hidden></small>
+        <div class="map-search-results" id="results" aria-label="搜索结果" hidden></div>
       </div>
       <section id="place" class="place" aria-live="polite"></section>
       <div class="layers">

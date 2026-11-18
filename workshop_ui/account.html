@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#173c37">
+  <title>我的投稿 · 南宁地图工坊</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/workshop/workshop.css">
+  <script type="module" src="/workshop/workshop.js"></script>
+</head>
+<body data-page="account">
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/workshop/">网上南宁 <span>地图工坊</span></a>
+      <nav aria-label="主要导航">
+        <a href="/workshop/">模型投稿</a>
+        <a class="current" href="/workshop/account" aria-current="page">我的投稿</a>
+        <span class="account-name" data-account-name></span>
+        <button class="logout" type="button" data-logout>退出</button>
+      </nav>
+    </div>
+  </header>
+  <main class="shell desk">
+    <header class="desk-heading">
+      <div><h1>我的投稿</h1><p id="account-description">查看交付包的审核进度和审核意见。</p></div>
+      <a class="button primary small" href="/workshop/">新建投稿</a>
+    </header>
+    <section class="card account-board">
+      <div class="account-summary" aria-label="我的投稿统计">
+        <button class="account-filter" data-mine="all" aria-pressed="true" type="button"><span>全部投稿</span><strong>0</strong></button>
+        <button class="account-filter" data-mine="pending" aria-pressed="false" type="button"><span>待审核</span><strong>0</strong></button>
+        <button class="account-filter" data-mine="approved" aria-pressed="false" type="button"><span>待移植</span><strong>0</strong></button>
+        <button class="account-filter" data-mine="completed" aria-pressed="false" type="button"><span>已完成</span><strong>0</strong></button>
+        <button class="account-filter" data-mine="other" aria-pressed="false" type="button"><span>退修、拒绝或撤回</span><strong>0</strong></button>
+      </div>
+      <p class="feedback" id="account-feedback" aria-live="polite"></p>
+      <div id="my-submissions"></div>
+    </section>
+  </main>
+  <dialog id="withdraw-dialog" aria-labelledby="withdraw-title">
+    <div class="dialog-bar"><div><h2 id="withdraw-title">撤回工单</h2><p id="withdraw-target"></p></div></div>
+    <form id="withdraw-form" class="decision-form withdraw-form">
+      <p>撤回后，这份工单会结束。已提交的版本和审核记录会保留。</p>
+      <label for="withdraw-note">撤回说明（选填）</label>
+      <textarea id="withdraw-note" rows="3" maxlength="1000"></textarea>
+      <p id="withdraw-feedback" class="feedback" aria-live="polite"></p>
+      <div class="preview-links">
+        <button id="cancel-withdraw" class="button quiet small" type="button">返回</button>
+        <button id="confirm-withdraw" class="button quiet small" type="submit">确认撤回</button>
+      </div>
+    </form>
+  </dialog>
+  <footer class="shell footer"><span>南宁地图工坊</span><span>玩家主页</span></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#173c37">
+  <title>审核工单 · 南宁地图工坊</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/workshop/workshop.css">
+  <script type="module" src="/workshop/workshop.js"></script>
+</head>
+<body data-page="review">
+  <header class="site-header">
+    <div class="shell nav">
+      <a class="wordmark" href="/workshop/review">网上南宁 <span>地图工坊</span></a>
+      <nav aria-label="主要导航">
+        <a class="current" href="/workshop/review" aria-current="page">审核工单</a>
+        <a class="map-link" href="/?from=review" target="_blank" rel="noopener">打开地图 <span aria-hidden="true">↗</span></a>
+        <span class="account-name" data-account-name></span>
+        <button class="logout" type="button" data-logout>退出</button>
+      </nav>
+    </div>
+  </header>
+  <main class="shell desk">
+    <div class="desk-heading">
+      <div><h1>审核工单</h1><p>查看全站投稿队列，核对模型、附件和授权，再记录审核结论。</p></div>
+      <div class="desk-actions">
+        <button id="open-mcp" class="button quiet small" type="button" aria-haspopup="dialog">MCP 接入</button>
+        <button id="refresh" class="button quiet small" type="button">刷新队列</button>
+      </div>
+    </div>
+    <div class="review-layout">
+      <aside class="card queue">
+        <div class="queue-header"><h2>审核队列 <span id="queue-count">0</span></h2><p>按材料分数排序，同分先投稿先审。</p></div>
+        <div class="filters" aria-label="筛选审核状态">
+          <button type="button" data-filter="agent" aria-pressed="false">待 Agent 初审</button>
+          <button type="button" data-filter="human" aria-pressed="true">待人工复核</button>
+          <button type="button" data-filter="mine" aria-pressed="false">我认领的</button>
+          <button type="button" data-filter="porting" aria-pressed="false">待移植</button>
+          <button type="button" data-filter="handled" aria-pressed="false">已处理</button>
+          <button type="button" data-filter="all" aria-pressed="false">全部</button>
+        </div>
+        <p id="queue-feedback" class="feedback" aria-live="polite"></p>
+        <div id="queue"></div>
+      </aside>
+      <article class="card details-card" id="detail" aria-label="投稿详情"></article>
+    </div>
+  </main>
+  <dialog id="mcp-dialog" aria-labelledby="mcp-title">
+    <div class="dialog-bar">
+      <div><h2 id="mcp-title">连接审稿和移植 Agent</h2><p>将配置添加到本机 MCP 客户端，可读取工单、保存审核建议、导出交付包和登记移植完成。</p></div>
+      <form method="dialog"><button class="button quiet small" type="submit">关闭</button></form>
+    </div>
+    <div class="mcp-dialog-body">
+      <pre id="mcp-config" class="prompt" hidden></pre>
+      <button id="copy-mcp" class="button primary small" type="button" disabled>复制配置</button>
+      <p id="mcp-feedback" class="feedback" aria-live="polite"></p>
+    </div>
+  </dialog>
+  <footer class="shell footer"><span>南宁地图工坊</span><span>本机审核原型</span></footer>
+</body>
+</html>

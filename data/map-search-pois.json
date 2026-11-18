@@ -1,0 +1,1550 @@
+{
+  "baseRevision": "c68fddd3c1591787",
+  "sources": [
+    "https://nanningol.com/assets/startGame-Ymj9DyjN.js",
+    "https://nanningol.com/assets/pubPose-D3tosHPC.js",
+    "https://nanningol.com/assets/GameUI-CgCXoKC1.js"
+  ],
+  "places": [
+    {
+      "id": "metro:4018278956",
+      "name": "白苍岭站",
+      "en": "1号线 · A 口 · BAICANGLING",
+      "point": [
+        -8486.4,
+        -2481.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5211422040",
+      "name": "百花岭站",
+      "en": "1号线 · A 口 · BAIHUALING",
+      "point": [
+        3941,
+        -1109
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5320425558",
+      "name": "朝阳广场站",
+      "en": "1号线 · 2号线 · A 口 · Chaoyang Square",
+      "point": [
+        -7085.7,
+        -1106.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5211401030",
+      "name": "东盟商务区站",
+      "en": "1号线 · A 口 · ASEAN Business District",
+      "point": [
+        937.1,
+        -521.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5211363684",
+      "name": "动物园站",
+      "en": "1号线 · C 口 · Nanning Zoo",
+      "point": [
+        -12399.7,
+        -3211.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7870753999",
+      "name": "凤岭站",
+      "en": "1号线 · B2 口 · FENGLING",
+      "point": [
+        2191.1,
+        -429
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5211422050",
+      "name": "佛子岭站",
+      "en": "1号线 · C 口 · FOZILING",
+      "point": [
+        3716.4,
+        -2519.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5211380014",
+      "name": "广西大学站",
+      "en": "1号线 · 5号线 · A 口 · Guangxi University",
+      "point": [
+        -9909.2,
+        -2559.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018278917",
+      "name": "会展中心站",
+      "en": "1号线 · A 口 · Convention & Exhibition Center",
+      "point": [
+        -597,
+        -546.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7870753998",
+      "name": "火车东站",
+      "en": "1号线 · A 口 · Nanning East Railway Station",
+      "point": [
+        2489.3,
+        -3460.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5347046205",
+      "name": "火车站",
+      "en": "1号线 · 2号线 · A 口 · Nanning Railway Station",
+      "point": [
+        -7556.9,
+        -1904.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768709",
+      "name": "金湖广场站",
+      "en": "1号线 · 3号线 · A 口 · JINHU Square",
+      "point": [
+        -1810.4,
+        -451
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018278925",
+      "name": "埌东客运站",
+      "en": "1号线 · A 口 · LANGDONG Coach Station",
+      "point": [
+        3004.7,
+        -520.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018278952",
+      "name": "鲁班路站",
+      "en": "1号线 · A 口 · Luban Lu",
+      "point": [
+        -10961.3,
+        -2896.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018278909",
+      "name": "麻村站",
+      "en": "1号线 · A 口 · MACUN",
+      "point": [
+        -4338.8,
+        -523.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018271150",
+      "name": "民族大学站",
+      "en": "1号线 · A 口 · Guangxi University for Nationalities",
+      "point": [
+        -16085,
+        -3214
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:5211380012",
+      "name": "民族广场站",
+      "en": "1号线 · A 口 · MINZU Square",
+      "point": [
+        -5493.1,
+        -526.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7870754000",
+      "name": "南湖站",
+      "en": "1号线 · A 口 · NANHU",
+      "point": [
+        -2645.9,
+        -599.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018271166",
+      "name": "清川站",
+      "en": "1号线 · A 口 · QINGCHUAN",
+      "point": [
+        -14010,
+        -3626.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:4018278919",
+      "name": "万象城站",
+      "en": "1号线 · A 口 · WANXIANGCHENG",
+      "point": [
+        158.1,
+        -514.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7870754001",
+      "name": "新民路站",
+      "en": "1号线 · A 口 · XINMIN LU",
+      "point": [
+        -6427,
+        -525.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6518594208",
+      "name": "安吉客运站",
+      "en": "2号线 · 3号线 · A 口 · Anji Coach Station",
+      "point": [
+        -9415.8,
+        -7852.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8151244743",
+      "name": "大沙田站",
+      "en": "2号线 · 4号线 · A 口 · Dashatian",
+      "point": [
+        -7530.1,
+        5259.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7820672767",
+      "name": "东风路站",
+      "en": "2号线 · A 口 · Dongfeng Lu",
+      "point": [
+        -3804,
+        9871
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742095",
+      "name": "福建园站",
+      "en": "2号线 · A 口 · Fujianyuan",
+      "point": [
+        -8001.9,
+        1422.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9351742422",
+      "name": "建设路站",
+      "en": "2号线 · A 口 · Jianshe Lu",
+      "point": [
+        -7289.8,
+        6247.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742092",
+      "name": "江南客运站",
+      "en": "2号线 · A 口 · Jiangnan Coach Station",
+      "point": [
+        -7951.4,
+        4619.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742090",
+      "name": "金象站",
+      "en": "2号线 · A 口 · Jinxiang",
+      "point": [
+        -5890.7,
+        8579.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9295444790",
+      "name": "明秀路站",
+      "en": "2号线 · 5号线 · A 口 · MINGXIU LU",
+      "point": [
+        -7906.2,
+        -3444.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8151357010",
+      "name": "那福路站",
+      "en": "2号线 · A 口 · Nafu Lu",
+      "point": [
+        -1663.1,
+        9296.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742096",
+      "name": "南宁剧场站",
+      "en": "2号线 · B2 口 · Nanning Theater",
+      "point": [
+        -7692.5,
+        520.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6528202618",
+      "name": "平良立交站",
+      "en": "2号线 · 3号线 · A 口 · Pingliang Overpass",
+      "point": [
+        -592.3,
+        9047.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9295444821",
+      "name": "三十三中站",
+      "en": "2号线 · A 口 · Nanning No. 33 Middle School",
+      "point": [
+        -8912.2,
+        -5413.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742093",
+      "name": "石柱岭站",
+      "en": "2号线 · A 口 · Shizhuling",
+      "point": [
+        -7979.6,
+        3104.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742091",
+      "name": "石子塘站",
+      "en": "2号线 · A 口 · Shizitang",
+      "point": [
+        -6725,
+        7474.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9295444822",
+      "name": "苏卢站",
+      "en": "2号线 · A 口 · Sulu",
+      "point": [
+        -9186.2,
+        -6634.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8151357007",
+      "name": "坛泽站",
+      "en": "2号线 · A 口 · Tanze",
+      "point": [
+        669.8,
+        9132.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742094",
+      "name": "亭洪路站",
+      "en": "2号线 · A 口 · Tinghong Lu",
+      "point": [
+        -7987.2,
+        2289.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9295444873",
+      "name": "西津站",
+      "en": "2号线 · A 口 · Xijin",
+      "point": [
+        -9315,
+        -9056
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9295444753",
+      "name": "秀厢站",
+      "en": "2号线 · A 口 · Xiuxiang",
+      "point": [
+        -8511.7,
+        -4490.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9299742089",
+      "name": "玉洞站",
+      "en": "2号线 · A 口 · Yudong",
+      "point": [
+        -5433.5,
+        9545.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7820672779",
+      "name": "玉岭路站",
+      "en": "2号线 · A 口 · Yuling Lu",
+      "point": [
+        -3025.4,
+        9631.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768703",
+      "name": "北湖北路站",
+      "en": "3号线 · A 口 · Beihubei Road",
+      "point": [
+        -7442.9,
+        -7434
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768692",
+      "name": "滨湖路站",
+      "en": "3号线 · A 口 · Binhu Road",
+      "point": [
+        -2060.7,
+        -1868.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6518594236",
+      "name": "创业路站",
+      "en": "3号线 · A 口 · Chuangye Road",
+      "point": [
+        -10849.9,
+        -7844.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768695",
+      "name": "大鸡村站",
+      "en": "3号线 · A 口 · Dajicun",
+      "point": [
+        -3944.9,
+        -7001.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768693",
+      "name": "东葛路站",
+      "en": "3号线 · A 口 · Dongge Road",
+      "point": [
+        -3069.4,
+        -2356.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:7905547568",
+      "name": "东沟岭站",
+      "en": "3号线 · A 口 · Donggouling",
+      "point": [
+        -3540.7,
+        -4150.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524816058",
+      "name": "广西规划馆站",
+      "en": "3号线 · A 口 · Guangxi Planning Exhibition Hall",
+      "point": [
+        -1237.9,
+        5719.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768704",
+      "name": "科园大道站",
+      "en": "3号线 · A 口 · Keyuan Dadao",
+      "point": [
+        -12339.5,
+        -7793.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768687",
+      "name": "埌西站",
+      "en": "3号线 · A 口 · Langxi",
+      "point": [
+        -2327.7,
+        233.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524758273",
+      "name": "青秀山站",
+      "en": "3号线 · A 口 · Qingxiushan",
+      "point": [
+        -2138.8,
+        1744.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524758283",
+      "name": "青竹立交站",
+      "en": "3号线 · A 口 · Qingzhu Overpass",
+      "point": [
+        -2625.6,
+        1015.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6528202625",
+      "name": "庆歌路站",
+      "en": "3号线 · A 口 · Qing'ge Road",
+      "point": [
+        -588.9,
+        6394.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524758266",
+      "name": "市博物馆站",
+      "en": "3号线 · A 口 · Nanning Museum",
+      "point": [
+        -1341.2,
+        3649.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6528202623",
+      "name": "五象湖站",
+      "en": "3号线 · A 口 · Wuxiang Lake",
+      "point": [
+        -595,
+        7702.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768696",
+      "name": "小鸡村站",
+      "en": "3号线 · 5号线 · A 口 · XIAO JICUN",
+      "point": [
+        -3518,
+        -5342.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768697",
+      "name": "兴桂路站",
+      "en": "3号线 · A 口 · Xinggui Road",
+      "point": [
+        -3359.6,
+        -6346.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768701",
+      "name": "秀峰路站",
+      "en": "3号线 · A 口 · Xiufeng Road",
+      "point": [
+        -6022.4,
+        -7806.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768699",
+      "name": "邕武路站",
+      "en": "3号线 · A 口 · Yongwu Road",
+      "point": [
+        -5037.9,
+        -7524.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:6524768694",
+      "name": "长堽路站",
+      "en": "3号线 · C 口 · Changgang Road",
+      "point": [
+        -3211.8,
+        -3086.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147788429",
+      "name": "总部基地站",
+      "en": "3号线 · 4号线 · A 口 · Advanced Business Park",
+      "point": [
+        -1435.6,
+        4477.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147788430",
+      "name": "飞龙路站",
+      "en": "4号线 · D 口 · FEILONG LU",
+      "point": [
+        -252.7,
+        4760.6
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809867",
+      "name": "洪运路站",
+      "en": "4号线 · A 口 · Hongyun Lu",
+      "point": [
+        -15112.3,
+        4694.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809870",
+      "name": "金象大道站",
+      "en": "4号线 · A 口 · Jinxiang Dadao",
+      "point": [
+        -6876.3,
+        5286.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809869",
+      "name": "金阳路站",
+      "en": "4号线 · A 口 · JINYANG LU",
+      "point": [
+        -11129.1,
+        5271.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147782980",
+      "name": "楞塘村站",
+      "en": "4号线 · A 口 · Lengtangcun",
+      "point": [
+        3951.4,
+        5965.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147782978",
+      "name": "良庆大桥南站",
+      "en": "4号线 · A 口 · LIANGQING Bridge South",
+      "point": [
+        1727.5,
+        6020.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147782979",
+      "name": "良庆圩站",
+      "en": "4号线 · A 口 · LIANGQINGXU",
+      "point": [
+        2978.9,
+        6165.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8140390441",
+      "name": "龙岗站",
+      "en": "4号线 · A 口 · Longgang",
+      "point": [
+        7796.2,
+        5021
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809874",
+      "name": "那洪立交站",
+      "en": "4号线 · 5号线 · A 口 · Nahong Overpass",
+      "point": [
+        -12284.7,
+        5267.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809871",
+      "name": "那历村站",
+      "en": "4号线 · A 口 · NALICUN",
+      "point": [
+        -13427.5,
+        5278.5
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147782975",
+      "name": "清平坡站",
+      "en": "4号线 · A 口 · Qingpingpo",
+      "point": [
+        6650.9,
+        5444.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147782977",
+      "name": "体育中心东站",
+      "en": "4号线 · A 口 · Guangxi Sports Center East",
+      "point": [
+        1001.6,
+        5248.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147782976",
+      "name": "体育中心西站",
+      "en": "4号线 · A 口 · Guangxi Sports Center West",
+      "point": [
+        287.1,
+        4759.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809872",
+      "name": "通源路站",
+      "en": "4号线 · A 口 · TONGYUAN LU",
+      "point": [
+        -9231.7,
+        5529.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809873",
+      "name": "五象岭站",
+      "en": "4号线 · A 口 · Wuxiangling",
+      "point": [
+        -5210.9,
+        5226.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:8147809868",
+      "name": "玉象路站",
+      "en": "4号线 · A 口 · YUXIANG LU",
+      "point": [
+        -2735.1,
+        4437.8
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245754",
+      "name": "北湖南路站",
+      "en": "5号线 · A 口 · Beihunan Lu",
+      "point": [
+        -6979.3,
+        -3970.1
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289282076",
+      "name": "国凯大道站",
+      "en": "5号线 · A 口 · GUOKAI DADAO",
+      "point": [
+        -12107.6,
+        6000.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245755",
+      "name": "虎邱站",
+      "en": "5号线 · A 口 · HUQIU",
+      "point": [
+        -6030.6,
+        -4374.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289282078",
+      "name": "江南公园站",
+      "en": "5号线 · A 口 · JIANGNAN Park",
+      "point": [
+        -12092.2,
+        3050.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245752",
+      "name": "降桥站",
+      "en": "5号线 · A 口 · JIANGQIAO",
+      "point": [
+        -1651.2,
+        -6038.4
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289282077",
+      "name": "金凯路站",
+      "en": "5号线 · A 口 · JINKAI LU",
+      "point": [
+        -12109,
+        4336.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245751",
+      "name": "金桥客运站",
+      "en": "5号线 · A 口 · JINQIAO Coach Station",
+      "point": [
+        -514.5,
+        -6143.2
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245750",
+      "name": "狮山公园站",
+      "en": "5号线 · A 口 · SHISHAN Park",
+      "point": [
+        -5043.1,
+        -4953.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289282080",
+      "name": "五一立交站",
+      "en": "5号线 · A 口 · WUYI Overpass",
+      "point": [
+        -11592,
+        784.9
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289282081",
+      "name": "新秀公园站",
+      "en": "5号线 · A 口 · XINXIU Park",
+      "point": [
+        -10533,
+        -1192.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245753",
+      "name": "秀灵路站",
+      "en": "5号线 · A 口 · XIULING LU",
+      "point": [
+        -8597,
+        -3239
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289245756",
+      "name": "邕宾立交站",
+      "en": "5号线 · A 口 · YONGBING Overpass",
+      "point": [
+        -2672.9,
+        -5338.3
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "metro:9289282079",
+      "name": "周家坡站",
+      "en": "5号线 · A 口 · ZHOUJIAPO",
+      "point": [
+        -12078.9,
+        2099.7
+      ],
+      "kind": "metro",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-milan",
+      "name": "美又佳（米兰小区店）",
+      "en": "M&J · Milan Community",
+      "point": [
+        -3729.85,
+        -1559.46
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-2",
+      "name": "美又佳（邕武路辅路店）",
+      "en": "M&J · 邕武路辅路",
+      "point": [
+        -5296.27,
+        -5228.2
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-3",
+      "name": "美又佳（弘良路店）",
+      "en": "M&J · 弘良路",
+      "point": [
+        2576.53,
+        6617.82
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-4",
+      "name": "美又佳（吉祥路店）",
+      "en": "M&J · 吉祥路",
+      "point": [
+        2955.2,
+        -2014.54
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-5",
+      "name": "美又佳（荔滨大道店）",
+      "en": "M&J · 荔滨大道",
+      "point": [
+        -3309.9,
+        3404.96
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-6",
+      "name": "美又佳（星光大道店）",
+      "en": "M&J · 星光大道",
+      "point": [
+        -7461.07,
+        90.56
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-7",
+      "name": "美又佳（江云路店）",
+      "en": "M&J · 江云路",
+      "point": [
+        7824.2,
+        2316.69
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-8",
+      "name": "美又佳（金川路店）",
+      "en": "M&J · 金川路",
+      "point": [
+        -1922.7,
+        -6741.28
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-9",
+      "name": "美又佳（公园路店）",
+      "en": "M&J · 公园路",
+      "point": [
+        -6254.41,
+        -2474.36
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-10",
+      "name": "美又佳（灵龟路店）",
+      "en": "M&J · 灵龟路",
+      "point": [
+        6347.2,
+        2343.19
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-11",
+      "name": "美又佳（植物路店）",
+      "en": "M&J · 植物路",
+      "point": [
+        -6333.46,
+        813.17
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-12",
+      "name": "美又佳（金湖北路店）",
+      "en": "M&J · 金湖北路",
+      "point": [
+        -1685.83,
+        -1500.54
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-13",
+      "name": "美又佳（长湖路店）",
+      "en": "M&J · 长湖路",
+      "point": [
+        -3168.76,
+        -2638.91
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-14",
+      "name": "美又佳（新民路店）",
+      "en": "M&J · 新民路",
+      "point": [
+        -6206.75,
+        -797.79
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "meiyijia-15",
+      "name": "美又佳（庆林路店）",
+      "en": "M&J · 庆林路",
+      "point": [
+        1373.66,
+        7327.01
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "noodle-1",
+      "name": "阿婆老友粉（唐山路店）",
+      "en": "Granny Laoyou Noodles · 唐山路",
+      "point": [
+        -7073.4,
+        -2464.26
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "noodle-2",
+      "name": "邕味螺蛳粉（虎岭大道店）",
+      "en": "Yong Snail Noodles · 虎岭大道",
+      "point": [
+        3728.47,
+        -6246.8
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "noodle-3",
+      "name": "桂香米粉（林里桥路店）",
+      "en": "Guixiang Rice Noodles · 林里桥路",
+      "point": [
+        3873.11,
+        290.11
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "noodle-4",
+      "name": "三街生榨粉（江南大道店）",
+      "en": "Sanjie Fresh-Press Noodles · 江南大道",
+      "point": [
+        -7082.19,
+        1218.81
+      ],
+      "kind": "store",
+      "teleport": true
+    },
+    {
+      "id": "tuning-king-1",
+      "name": "南宁改车王（长堽六里路店）",
+      "en": "Nanning Tuning King · 长堽六里路",
+      "point": [
+        -1898.7,
+        -3124.06
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "tuning-king-2",
+      "name": "南宁改车王（博艺路店）",
+      "en": "Nanning Tuning King · 博艺路",
+      "point": [
+        -2127.24,
+        3839.43
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "tuning-king-3",
+      "name": "南宁改车王（青环路店）",
+      "en": "Nanning Tuning King · 青环路",
+      "point": [
+        3231.03,
+        769.04
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "bike-tuning-1",
+      "name": "邕城摩改（中柬路店）",
+      "en": "Yongcheng Moto Lab · 中柬路",
+      "point": [
+        331.53,
+        195.87
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "bike-tuning-2",
+      "name": "邕城摩改（长湖路店）",
+      "en": "Yongcheng Moto Lab · 长湖路",
+      "point": [
+        -3014.7,
+        -2431.02
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "bike-tuning-3",
+      "name": "邕城摩改（吉祥路店）",
+      "en": "Yongcheng Moto Lab · 吉祥路",
+      "point": [
+        2819.54,
+        -2861.79
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "bike-tuning-4",
+      "name": "邕城摩改（龙堤路店）",
+      "en": "Yongcheng Moto Lab · 龙堤路",
+      "point": [
+        165.49,
+        4241.79
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "bike-tuning-5",
+      "name": "邕城摩改（柳园路店）",
+      "en": "Yongcheng Moto Lab · 柳园路",
+      "point": [
+        -3545.4,
+        2437.4
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "bike-tuning-6",
+      "name": "邕城摩改（凤岭南路店）",
+      "en": "Yongcheng Moto Lab · 凤岭南路",
+      "point": [
+        3889.08,
+        1512.21
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "brothers-auto-1",
+      "name": "兄弟车行（云景路店）",
+      "en": "Brothers Auto · 云景路",
+      "point": [
+        563.5,
+        -823.17
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "brothers-auto-2",
+      "name": "兄弟车行（龙堤路店）",
+      "en": "Brothers Auto · 龙堤路",
+      "point": [
+        -990.63,
+        3247.88
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "brothers-auto-3",
+      "name": "兄弟车行（长堽路店）",
+      "en": "Brothers Auto · 长堽路",
+      "point": [
+        -2455.2,
+        -3403.53
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "brothers-auto-4",
+      "name": "兄弟车行（林里桥路店）",
+      "en": "Brothers Auto · 林里桥路",
+      "point": [
+        4236.98,
+        977.58
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "brothers-auto-5",
+      "name": "兄弟车行（金湖南路店）",
+      "en": "Brothers Auto · 金湖南路",
+      "point": [
+        -2412.14,
+        330.05
+      ],
+      "kind": "vehicle",
+      "teleport": true
+    },
+    {
+      "id": "fishing:chaoyang",
+      "name": "朝阳江湾钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -7535.9,
+        -467.1
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:tingzi",
+      "name": "亭子江岸钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -6520.56,
+        2108.36
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:liusha",
+      "name": "柳沙回水湾钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -4157.83,
+        2223.1
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:kongmiao",
+      "name": "孔庙江畔钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        42.52,
+        3521.77
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:jiangbin",
+      "name": "江南滨江钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -7164.18,
+        56.13
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:jintou",
+      "name": "津头北岸钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -5557.53,
+        1641.98
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:baisha",
+      "name": "白沙水湾钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -4508.35,
+        2345.5
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:panlong",
+      "name": "蟠龙江畔钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        -740.48,
+        3298.59
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "fishing:sanan",
+      "name": "三岸风湾钓点",
+      "en": "Yongjiang fishing",
+      "point": [
+        3742,
+        3625.92
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "yongjiang-tackle",
+      "name": "邕江渔具行（亭子码头）",
+      "en": "Yongjiang tackle & fish market",
+      "point": [
+        -6769.88,
+        1800.13
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "yongjiang-tackle-chaoyang",
+      "name": "邕江渔具行（朝阳码头）",
+      "en": "Yongjiang tackle & fish market",
+      "point": [
+        -7910.1,
+        -373.03
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "yongjiang-tackle-shangyao",
+      "name": "邕江渔具行（上尧码头）",
+      "en": "Yongjiang tackle & fish market",
+      "point": [
+        -11621.27,
+        -940.49
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "yongjiang-tackle-kongmiao",
+      "name": "邕江渔具行（孔庙码头）",
+      "en": "Yongjiang tackle & fish market",
+      "point": [
+        259.88,
+        3634.15
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "yongjiang-tackle-pumiao",
+      "name": "邕江渔具行（蒲庙江畔）",
+      "en": "Yongjiang tackle & fish market",
+      "point": [
+        10283.17,
+        5718.86
+      ],
+      "kind": "fishing",
+      "teleport": true
+    },
+    {
+      "id": "club-147",
+      "name": "147俱乐部",
+      "en": "Billiards club · 永凯现代城 · 台球",
+      "point": [
+        -3649.6,
+        -1833.6
+      ],
+      "kind": "culture",
+      "teleport": true
+    },
+    {
+      "id": "id-photo-studio",
+      "name": "居民服务点 · 证件照",
+      "en": "ID photo",
+      "point": [
+        651.67,
+        773.53
+      ],
+      "kind": "place",
+      "teleport": true
+    }
+  ]
+}

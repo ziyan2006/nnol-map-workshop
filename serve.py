@@ -20,11 +20,30 @@ CITY_BASE = {"index.json", "terrain.json", "terrain.png"}
 CITY_GROUPS = {"tiles", "styles", "roads", "streets", "road-signs", "compounds", "riverfront", "tunnels", "life"}
 DOWNLOADS = BoundedSemaphore(6)
 MAX_BYTES = 24 * 1024 * 1024
+MAP_FILES = {"index.html", "app.js", "map.js", "replacements.js", "street.js", "street-tiles.js",
+             "street-materials.js", "landmarks.js", "terrain.js", "style.css", "map-search.js", "map-search.css"}
 
 
 class MapHandler(SimpleHTTPRequestHandler):
+    asset_directories = {"data", "vendor"}
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
+
+    def send_head(self):
+        # Serve map assets even when the checkout contains a private database or source files.
+        resolved = Path(self.translate_path(self.path)).resolve()
+        relative = resolved.relative_to(ROOT) if resolved.is_relative_to(ROOT) else None
+        parts = relative.parts if relative is not None else ()
+        allowed = resolved == ROOT or (
+            bool(parts) and not any(part.startswith(".") for part in parts) and resolved.is_file()
+            and (str(relative) in MAP_FILES or parts[0] in self.asset_directories)
+            and not any(".sqlite" in part.lower() for part in parts)
+        )
+        if not allowed:
+            self.send_error(404)
+            return None
+        return super().send_head()
 
     def do_GET(self):
         url = urlsplit(self.path)

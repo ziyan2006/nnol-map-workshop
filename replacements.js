@@ -44,8 +44,8 @@ function validSource(source) {
   );
 }
 
-async function loadRelease(place, version, index) {
-  const folder = new URL(`${place.id}/${version}/`, directory);
+async function loadRelease(place, version, index, catalogDirectory) {
+  const folder = new URL(`${place.id}/${version}/`, catalogDirectory);
   const manifest = await json(new URL("manifest.json", folder));
   const { schemaVersion, target, baseRevision, placement, scope, asset, source } = manifest;
   const valid = schemaVersion === 1 && target === place.id && manifest.version === version &&
@@ -75,10 +75,13 @@ async function loadRelease(place, version, index) {
   return { id: place.id, place, version, placement, masks, asset, url: new URL(asset.file, folder) };
 }
 
-export async function loadReplacements(index, enabled) {
+export async function loadReplacements(index, enabled, candidate) {
   const places = [], models = [];
   try {
-    const release = await json(new URL("index.json", directory));
+    const catalogDirectory = /^[a-f0-9]{32}$/.test(candidate ?? "")
+      ? new URL(`/api/workshop/packages/${candidate}/replacements/`, location.origin)
+      : directory;
+    const release = await json(new URL("index.json", catalogDirectory));
     if (release.schemaVersion !== 1 || release.baseRevision !== index.revision || !Array.isArray(release.targets)) {
       return { places, models };
     }
@@ -89,7 +92,7 @@ export async function loadReplacements(index, enabled) {
       places.push(place);
       return enabled && typeof place.active === "string" && versionPattern.test(place.active);
     });
-    const loaded = await Promise.allSettled(targets.map(place => loadRelease(place, place.active, index)));
+    const loaded = await Promise.allSettled(targets.map(place => loadRelease(place, place.active, index, catalogDirectory)));
     for (const result of loaded) {
       if (result.status === "fulfilled") models.push(result.value);
       else console.warn("模型替换清单无效", result.reason);
